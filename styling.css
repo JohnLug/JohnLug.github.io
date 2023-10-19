@@ -1,0 +1,11 @@
+/* Course: SENG 513 */
+/* Date: Sept 27, 2023 */
+/* Assignment 1 */
+/* Name: John Lugue*/
+/* UCID: 30115250 */
+
+/* normalize.css (simplified) taken from slides*/
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a {
+    margin: 0;
+    padding: 0;
+}
