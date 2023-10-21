@@ -14,6 +14,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 /* cards are 200px width */
 
