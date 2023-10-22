@@ -18,6 +18,33 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.boardheader, .midboard, .footboard, .deck {
+    display: flex;
+    flex-direction: row;
+}
 
 /* cards are 200px width */
+
+/* board header */
+
+.boardheader {
+  background-color: #440060;
+}
+
+/* middle board */
+
+.midboard {
+    background-color: #8c92ac;
+}
+
+/* board footer */
+
+.footboard {
+    background-color: #12674a;
+}
+
+.deck {
+    display: flex;
+    flex-direction: row;
+}
 
