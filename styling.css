@@ -34,6 +34,24 @@ body {
   justify-content: space-around;
 }
 
+.boardheader > h1 {
+    padding: 10px;
+}
+
+.boardheader > button {
+    background-color: #555555;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 55px;
+}
+
 /* middle board */
 
 .midboard {
@@ -42,9 +60,33 @@ body {
     justify-content: space-around;
 }
 
-.midboard > .map > img {
+.midboard > .map > #map {
     border: 5px solid #440060;
 
+}
+
+.midboard > .map > #pinone {
+    position: absolute;
+}
+
+.midboard > .map > #pintwo {
+    position: absolute;
+}
+
+.midboard > .playerone > .playercards > #cardtwo {
+    position: absolute;
+}
+
+.midboard > .playerone > .playercards > #cardthree {
+    position: absolute;
+}
+
+.midboard > .playertwo > .playercards > #cardtwo {
+    position: absolute;
+}
+
+.midboard > .playertwo > .playercards > #cardthree {
+    position: absolute;
 }
 
 /* board footer */
@@ -56,6 +98,28 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
+.footboard > .deck > .discard > .playerdisc > #playdisc {
+    background-color: #555555;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.footboard > .deck > .discard > .infectiondisc > #infectdisc {
+    background-color: #555555;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+}
+
+
 
 .deck {
     justify-content: space-around;

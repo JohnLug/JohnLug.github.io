@@ -26,15 +26,14 @@
   <body>
     <div class="boardheader">
       <!-- Title and timer -->
-      <img src="assets/board/red_block_piece_test.png" alt="test" />
-      <h1>PANDEMIC</h1>
-      <p>Player 1 Action...</p>
+      <h1>PANDEMIC BOARD GAME</h1>
+      <button>Rules</button>
     </div>
 
     <div class="midboard">
       <!-- Player portraits, cards, and map -->
       <div class="playerone">
-        <h2>Player 1</h2>
+        <h2>Player 1 &nbsp; Currently Acting</h2>
         <img
           src="assets/cards/role_cards/dispatcher_role_card.png"
           alt="dispatcher"
@@ -42,14 +41,35 @@
         <p>Current Action Points: 3</p>
         <div class="playercards">
           <img
+            id="cardone"
             src="assets/cards/player_cards/manila_card_player.png"
             alt="manila card"
+          />
+          <img
+            id="cardtwo"
+            src="assets/cards/player_cards/miami_card_player.png"
+            alt="miami card"
+          />
+          <img
+            id="cardthree"
+            src="assets/cards/player_cards/mumbai_card_player.png"
+            alt="mumbai card"
           />
         </div>
       </div>
 
       <div class="map">
-        <img src="assets/board/map.png" alt="map" />
+        <img id="map" src="assets/board/map.png" alt="map" />
+        <img
+          id="pinone"
+          src="assets/board/dispatcher_pin_piece.png"
+          alt="dispatcher pin"
+        />
+        <img
+          id="pintwo"
+          src="assets/board/scientist_pin_piece.png"
+          alt="scientist pin"
+        />
       </div>
 
       <div class="playertwo">
@@ -61,8 +81,19 @@
         <p>Current Action Points:0</p>
         <div class="playercards">
           <img
+            id="cardone"
             src="assets/cards/player_cards/losangeles_card_player.png"
             alt="los angeles card"
+          />
+          <img
+            id="cardtwo"
+            src="assets/cards/player_cards/sanfran_card_player.png"
+            alt="san francisco card"
+          />
+          <img
+            id="cardthree"
+            src="assets/cards/player_cards/tokyo_card_player.png"
+            alt="tokyo card"
           />
         </div>
       </div>
@@ -71,7 +102,8 @@
     <div class="footboard">
       <!-- Outbreak counter, player deck, infection deck, discard piles, cure visual -->
       <div class="outbreak">
-        <p>outbreak palceholder</p>
+        <img src="assets/board/outbreak_piece.png" alt="outbreak" />
+        <p class="counter">1</p>
       </div>
 
       <div class="deck">
@@ -84,11 +116,11 @@
 
         <div class="discard">
           <div class="playerdisc">
-            <p>playerdisc placeholder</p>
+            <button id="playdisc">Discarded Player</button>
           </div>
 
           <div class="infectiondisc">
-            <p>infectiondisc placeholder</p>
+            <button id="infectdisc">Discarded Infection</button>
           </div>
         </div>
 
@@ -101,7 +133,13 @@
       </div>
 
       <div class="cure">
-        <p>cure placeholder</p>
+        <img src="assets/board/black_cure_piece.png" alt="empty black cure" />
+        <img src="assets/board/red_cure_piece.png" alt="red cure" />
+        <img src="assets/board/blue_empty_piece.png" alt="empty blue cure" />
+        <img
+          src="assets/board/yellow_empty_piece.png"
+          alt="empty yellow cure"
+        />
       </div>
     </div>
   </body>
