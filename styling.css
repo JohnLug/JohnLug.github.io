@@ -21,6 +21,7 @@ body {
 .boardheader, .midboard, .footboard, .deck {
     display: flex;
     flex-direction: row;
+    color: white;
 }
 
 /* cards are 200px width */
@@ -29,22 +30,34 @@ body {
 
 .boardheader {
   background-color: #440060;
+  min-height: 55px;
+  justify-content: space-around;
 }
 
 /* middle board */
 
 .midboard {
     background-color: #8c92ac;
+    min-height: 593px;
+    justify-content: space-around;
+}
+
+.midboard > .map > img {
+    border: 5px solid #440060;
+
 }
 
 /* board footer */
 
 .footboard {
     background-color: #12674a;
+    border: 10px solid #8c92ac;
+    min-height: 300px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .deck {
-    display: flex;
-    flex-direction: row;
+    justify-content: space-around;
 }
 
