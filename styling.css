@@ -23,7 +23,6 @@ body {
 .boardheader, .midboard, .footboard, .deck {
     display: flex;
     flex-direction: row;
-    max-width: ;
     color: white;
 }
 
