@@ -33,4 +33,12 @@ function updateCureStatus () {}
 function drawAnimation () {}
 // visual of taking a card from deck and putting on hand
 
+function infectionAnimation () {}
+// "toxic" clouds animations on cities
+
+function cureAnimation () {}
+// cure drops on cities
+
+
+
 
