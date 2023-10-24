@@ -25,7 +25,7 @@
 
   <body>
     <div class="boardheader">
-      <!-- Title and timer -->
+      <!-- Title and rules -->
       <h1>PANDEMIC BOARD GAME</h1>
       <button>Rules</button>
     </div>
@@ -33,12 +33,13 @@
     <div class="midboard">
       <!-- Player portraits, cards, and map -->
       <div class="playerone">
-        <h2>Player 1 &nbsp; Currently Acting</h2>
+        <h3>Player 1</h3>
+        <h4>Currently Acting..</h4>
+        <p>Current Action Points: 3</p>
         <img
           src="assets/cards/role_cards/dispatcher_role_card.png"
           alt="dispatcher"
         />
-        <p>Current Action Points: 3</p>
         <div class="playercards">
           <img
             id="cardone"
@@ -73,12 +74,13 @@
       </div>
 
       <div class="playertwo">
-        <h2>Player 2</h2>
+        <h3>Player 2</h3>
+        <h4>Waiting Turn..</h4>
+        <p>Current Action Points: 0</p>
         <img
           src="assets/cards/role_cards/scientist_role_card.png"
           alt="scientist"
         />
-        <p>Current Action Points:0</p>
         <div class="playercards">
           <img
             id="cardone"
@@ -133,10 +135,23 @@
       </div>
 
       <div class="cure">
-        <img src="assets/board/black_cure_piece.png" alt="empty black cure" />
-        <img src="assets/board/red_cure_piece.png" alt="red cure" />
-        <img src="assets/board/blue_empty_piece.png" alt="empty blue cure" />
         <img
+          class="blackcure"
+          src="assets/board/black_cure_piece.png"
+          alt="empty black cure"
+        />
+        <img
+          class="redcure"
+          src="assets/board/red_cure_piece.png"
+          alt="red cure"
+        />
+        <img
+          class="bluecure"
+          src="assets/board/blue_empty_piece.png"
+          alt="empty blue cure"
+        />
+        <img
+          class="yellowcure"
           src="assets/board/yellow_empty_piece.png"
           alt="empty yellow cure"
         />
