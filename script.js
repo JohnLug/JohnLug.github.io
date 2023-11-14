@@ -1,3 +1,11 @@
+import Deck from "./deck.js"
+
+const deckInfection = new Deck()
+const deckPlayer = new Deck()
+deckInfection.shuffleDeck()
+deckPlayer.shuffleDeck()
+console.log(deckInfection.cards)
+console.log(deckPlayer.cards) 
 
 function setup () {}
 // stuff to get the game ready and started like setting infections on cities, 

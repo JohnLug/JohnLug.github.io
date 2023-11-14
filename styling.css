@@ -22,7 +22,7 @@ body {
 
 .boardheader, .midboard, .footboard, .deck {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     color: white;
 }
 
@@ -33,13 +33,13 @@ body {
 .boardheader {
   background-color: #440060;
   min-height: 55px;
-  min-width: 1820px;
-  max-width: 1820px;
-  justify-content: space-around;
+  width: 1fr;
+  justify-content: center;
 }
 
 .boardheader > h1 {
     padding: 10px;
+    align-self: center;
 }
 
 .boardheader > button {
@@ -49,11 +49,7 @@ body {
     padding: 10px 20px;
     text-align: center;
     font-size: 15px;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 55px;
+    float: right;
 }
 
 /* middle board */
@@ -61,6 +57,7 @@ body {
 .midboard {
     background-color: #8c92ac;
     min-height: 650px;
+    width: 1fr;
     justify-content: space-around;
 }
 
@@ -87,7 +84,7 @@ body {
 
 }
 
-.midboard > .map > #pinone {
+/* .midboard > .map > #pinone {
     position: absolute;
     top: 159px;
     left: 1245px;
@@ -121,7 +118,7 @@ body {
     position: absolute;
     top: 490px;
     right:40px;
-}
+} */
 
 /* board footer */
 
@@ -129,6 +126,7 @@ body {
     background-color: #12674a;
     border: 10px solid #8c92ac;
     min-height: 300px;
+    width: 1fr;
     justify-content: space-around;
     align-items: center;
 }
