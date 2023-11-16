@@ -1,9 +1,28 @@
 import Deck from "./deck.js"
 
+const roles = ["Dispatcher", "Medic",  "Quarantine", "Reasearcher", "Scientist"]
+
 const deckInfection = new Deck()
 const deckPlayer = new Deck()
 deckInfection.shuffleDeck()
 deckPlayer.shuffleDeck()
+
+var outbreakNum = 0;
+
+const playerOne = {
+    role: "Dispatcher",
+    hand: [],
+    actionPoints: 0
+
+};
+
+const playerTwo = {
+    role: "Scientist",
+    hand: [],
+    actionPoints: 0
+
+};
+
 console.log(deckInfection.cards)
 console.log(deckPlayer.cards) 
 

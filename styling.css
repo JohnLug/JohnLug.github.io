@@ -15,12 +15,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
+    background-color: #290039;
     height: 100vh;
     width: 100vw;
     font-family: 'Montserrat', sans-serif;
 }
 
 .boardheader, .midboard, .footboard, .deck {
+    border-radius: 10px;
+    margin: 10px;
     display: flex;
     flex-direction: row; 
     color: white;
@@ -32,7 +35,7 @@ body {
 
 .boardheader {
   background-color: #440060;
-  min-height: 55px;
+  height: 5vh;
   width: 1fr;
   justify-content: center;
 }
@@ -56,7 +59,7 @@ body {
 
 .midboard {
     background-color: #8c92ac;
-    min-height: 650px;
+    height: 60vh;
     width: 1fr;
     justify-content: space-around;
 }
@@ -81,7 +84,7 @@ body {
 
 .midboard > .map > #map {
     border: 5px solid #440060;
-
+    border-radius: 10px;
 }
 
 /* .midboard > .map > #pinone {
@@ -124,8 +127,7 @@ body {
 
 .footboard {
     background-color: #12674a;
-    border: 10px solid #8c92ac;
-    min-height: 300px;
+    height: 30vh;
     width: 1fr;
     justify-content: space-around;
     align-items: center;
@@ -210,6 +212,7 @@ body {
     font-size: 100px;
     top:805px;
     left:240px;
+    user-select: none;
 }
 
 
