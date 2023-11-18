@@ -35,7 +35,8 @@
       <!-- Player portraits, cards, and map -->
       <div class="playerone">
         <h3>Player 1</h3>
-        <h4>Currently Acting..</h4>
+        <h4 id="Acting">Currently Acting..</h4>
+        <h4 id="Waiting">Waiting Turn..</h4>
         <p>Current Action Points: 3</p>
         <img
           src="assets/cards/role_cards/dispatcher_role_card.png"
@@ -43,41 +44,17 @@
         />
         <div class="playercards">
           <p>hand</p>
-          <!-- <img
-            id="cardone"
-            src="assets/cards/player_cards/manila_card_player.png"
-            alt="manila card"
-          />
-          <img
-            id="cardtwo"
-            src="assets/cards/player_cards/miami_card_player.png"
-            alt="miami card"
-          />
-          <img
-            id="cardthree"
-            src="assets/cards/player_cards/mumbai_card_player.png"
-            alt="mumbai card"
-          /> -->
         </div>
       </div>
 
       <div class="map">
-        <img id="map" src="assets/board/map.png" alt="map" />
-        <!-- <img
-          id="pinone"
-          src="assets/board/dispatcher_pin_piece.png"
-          alt="dispatcher pin"
-        />
-        <img
-          id="pintwo"
-          src="assets/board/scientist_pin_piece.png"
-          alt="scientist pin"
-        /> -->
+        <!-- <img id="map" src="assets/board/map.png" alt="map" /> -->
       </div>
 
       <div class="playertwo">
         <h3>Player 2</h3>
-        <h4>Waiting Turn..</h4>
+        <h4 id="Acting">Currently Acting..</h4>
+        <h4 id="Waiting">Waiting Turn..</h4>
         <p>Current Action Points: 0</p>
         <img
           src="assets/cards/role_cards/scientist_role_card.png"
@@ -85,21 +62,6 @@
         />
         <div class="playercards">
           <p>hand</p>
-          <!-- <img
-            id="cardone"
-            src="assets/cards/player_cards/losangeles_card_player.png"
-            alt="los angeles card"
-          />
-          <img
-            id="cardtwo"
-            src="assets/cards/player_cards/sanfran_card_player.png"
-            alt="san francisco card"
-          />
-          <img
-            id="cardthree"
-            src="assets/cards/player_cards/tokyo_card_player.png"
-            alt="tokyo card"
-          /> -->
         </div>
       </div>
     </div>
@@ -140,12 +102,12 @@
       <div class="cure">
         <img
           class="blackcure"
-          src="assets/board/black_cure_piece.png"
+          src="assets/board/black_empty_piece.png"
           alt="empty black cure"
         />
         <img
           class="redcure"
-          src="assets/board/red_cure_piece.png"
+          src="assets/board/red_empty_piece.png"
           alt="red cure"
         />
         <img

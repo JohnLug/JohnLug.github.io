@@ -82,46 +82,56 @@ body {
     padding: 15px;
 }
 
-.midboard > .map > #map {
-    border: 5px solid #440060;
-    border-radius: 10px;
+.midboard > .map > {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); 
+    grid-template-columns: repeat(10, 1fr);
 }
 
-/* .midboard > .map > #pinone {
-    position: absolute;
-    top: 159px;
-    left: 1245px;
+.midboard > .map > .blueCity {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    color: white;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.midboard > .map > #pintwo {
-    position: absolute;
-    top: 192px;
-    left: 675px;
+.midboard > .map > .redCity {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    color: white;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.midboard > .playerone > .playercards > #cardtwo {
-    position: absolute;
-    top: 450px;
-    left: 57px;
+.midboard > .map > .yellowCity {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    color: white;
+    background-color:darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.midboard > .playerone > .playercards > #cardthree {
-    position: absolute;
-    top: 490px;
-    left: 57px;
+.midboard > .map > .blackCity {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    color: white;
+    background-color:#3b444b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.midboard > .playertwo > .playercards > #cardtwo {
-    position: absolute;
-    top: 450px;
-    right:40px;
-}
-
-.midboard > .playertwo > .playercards > #cardthree {
-    position: absolute;
-    top: 490px;
-    right:40px;
-} */
 
 /* board footer */
 
