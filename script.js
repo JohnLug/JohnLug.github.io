@@ -7,6 +7,11 @@ const YELLOWS = ["Los Angeles", "Mexico City", "Miami", "Sao Paulo", "Lagos", "K
 const roles = ["Dispatcher", "Medic",  "Quarantine", "Reasearcher", "Scientist"];
 const playerDeck = document.querySelector('.playerdeck');
 const map = document.querySelector('.map');
+const playerOnePin = 'assets/board/dispatcher_pin_piece.png';
+const playerTwoPin = 'assets/board/medic_pin_piece.png';
+
+var playerOne;
+var playerTwo;
 
 let gameRunning = false;
 let infectedCity = '';
@@ -23,27 +28,31 @@ function setUp() {
 
     var outbreakNum = 0;
 
-    const playerOne = {
+    playerOne = {
         role: "Dispatcher",
         hand: deckPlayer.cards.slice(0, 3),
-        actionPoints: 3
-
+        actionPoints: 3,
+        playerpos: {y: 0, x: 0}
     };
 
-    const playerTwo = {
+    playerTwo = {
         role: "Scientist",
         hand: deckPlayer.cards.slice(3, 6),
-        actionPoints: 3
-
+        actionPoints: 3,
+        playerpos: {y: 10, x: 5}
     };
 
-    // make map first 
+    makeMap()
     
     infectedCity = deckInfection.pop();
-    infectedCity();
+    // infectCityStart();
 } 
 
-function infectCity() {
+function infectCityStart() {
+
+}
+
+function infectCity () {
 
 }
 
@@ -56,25 +65,164 @@ function makeMap() {
     BLUES.forEach(function(cityName) {
         const city = document.createElement('div');
         city.classList.add('blueCity');
-        if (row < maxRow){
-            if(column < maxColumn) {
-                city.dataset.value = `(${row} ${column})`
+        if (row <= maxRow ){
+            if(column <= maxColumn) {
+                city.dataset.position = `(${row} ${column})`
                 column++;
             } else {
                 column = 1;
+                row++;
             }
-        } else {
-            row = 1;
         }
-
-        city.dataset.value = `(${})`
         city.innerText = cityName;
 
         map.appendChild(city);
 
+        if (row === playerOne.playerpos.y && column === playerOne.playerpos.x) {
+            const player1 = playerHTML(1,playerOnePin);
+            city.appendChild(player1)
+        }
+
+        if (row === playerTwo.playerpos.y && column === playerTwo.playerpos.x) {
+            const player2 = playerHTML(2,playerTwoPin);
+            city.appendChild(player2)
+        }
+
+        city.addEventListener('click', function() {
+            const positionClicked = {row, column};
+            if (canMove(playerOne.playerpos, positionClicked) && !(playerTwo.playerpos.y === positionClicked.row && playerTwo.playerpos.x === positionClicked.column)) {
+                movPlayer(1, playerOnePin, positionClicked);
+            } else if (canMove(playerTwo.playerpos, positionClicked) && !(playerOne.playerpos.y === positionClicked.row && playerOne.playerpos.x === positionClicked.column)) {
+                movPlayer(2, playerTwoPin, positionClicked);
+            } else {
+                console.log("Invalid");
+            }
+        })
+
+
+    });
+
+    REDS.forEach(function(cityName) {
+        const city = document.createElement('div');
+        city.classList.add('redCity');
+        if (row <= maxRow ){
+            if(column <= maxColumn) {
+                city.dataset.position = `(${row} ${column})`
+                column++;
+            } else {
+                column = 1;
+                row++;
+            }
+        }
+        city.innerText = cityName;
+
+        map.appendChild(city);
+
+        if (row === playerOne.playerpos.y && column === playerOne.playerpos.x) {
+            const player1 = playerHTML(1,playerOnePin);
+            city.appendChild(player1)
+        }
+
+        if (row === playerTwo.playerpos.y && column === playerTwo.playerpos.x) {
+            const player2 = playerHTML(2,playerTwoPin);
+            city.appendChild(player2)
+        }
+
+        city.addEventListener('click', function() {
+            const positionClicked = {row, column};
+            if (canMove(playerOne.playerpos, positionClicked) && !(playerTwo.playerpos.y === positionClicked.row && playerTwo.playerpos.x === positionClicked.column)) {
+                movPlayer(1, playerOnePin, positionClicked);
+            } else if (canMove(playerTwo.playerpos, positionClicked) && !(playerOne.playerpos.y === positionClicked.row && playerOne.playerpos.x === positionClicked.column)) {
+                movPlayer(2, playerTwoPin, positionClicked);
+            } else {
+                console.log("Invalid");
+            }
+        })
+
+
+    });
+
+    YELLOWS.forEach(function(cityName) {
+        const city = document.createElement('div');
+        city.classList.add('yellowCity');
+        if (row <= maxRow ){
+            if(column <= maxColumn) {
+                city.dataset.position = `(${row} ${column})`
+                column++;
+            } else {
+                column = 1;
+                row++;
+            }
+        }
+        city.innerText = cityName;
+
+        map.appendChild(city);
+
+        if (row === playerOne.playerpos.y && column === playerOne.playerpos.x) {
+            const player1 = playerHTML(1,playerOnePin);
+            city.appendChild(player1)
+        }
+
+        if (row === playerTwo.playerpos.y && column === playerTwo.playerpos.x) {
+            const player2 = playerHTML(2,playerTwoPin);
+            city.appendChild(player2)
+        }
+
+        city.addEventListener('click', function() {
+            const positionClicked = {row, column};
+            if (canMove(playerOne.playerpos, positionClicked) && !(playerTwo.playerpos.y === positionClicked.row && playerTwo.playerpos.x === positionClicked.column)) {
+                movPlayer(1, playerOnePin, positionClicked);
+            } else if (canMove(playerTwo.playerpos, positionClicked) && !(playerOne.playerpos.y === positionClicked.row && playerOne.playerpos.x === positionClicked.column)) {
+                movPlayer(2, playerTwoPin, positionClicked);
+            } else {
+                console.log("Invalid");
+            }
+        })
+
+
+    });
+
+    BLACKS.forEach(function(cityName) {
+        const city = document.createElement('div');
+        city.classList.add('blackCity');
+        if (row <= maxRow ){
+            if(column <= maxColumn) {
+                city.dataset.position = `(${row} ${column})`
+                column++;
+            } else {
+                column = 1;
+                row++;
+            }
+        }
+        city.innerText = cityName;
+
+        map.appendChild(city);
+
+        if (row === playerOne.playerpos.y && column === playerOne.playerpos.x) {
+            const player1 = playerHTML(1,playerOnePin);
+            city.appendChild(player1)
+        }
+
+        if (row === playerTwo.playerpos.y && column === playerTwo.playerpos.x) {
+            const player2 = playerHTML(2,playerTwoPin);
+            city.appendChild(player2)
+        }
+
+        city.addEventListener('click', function() {
+            const positionClicked = {row, column};
+            if (canMove(playerOne.playerpos, positionClicked) && !(playerTwo.playerpos.y === positionClicked.row && playerTwo.playerpos.x === positionClicked.column)) {
+                movPlayer(1, playerOnePin, positionClicked);
+            } else if (canMove(playerTwo.playerpos, positionClicked) && !(playerOne.playerpos.y === positionClicked.row && playerOne.playerpos.x === positionClicked.column)) {
+                movPlayer(2, playerTwoPin, positionClicked);
+            } else {
+                console.log("Invalid");
+            }
+        })
+
 
     });
 }
+
 
 function checkWin() {
     
@@ -87,41 +235,62 @@ function setup () {}
 // stuff to get the game ready and started like setting infections on cities, 
 // randomizing roles
 
-function randomizeDeck () {}
-// randomize the infection and player deck
-
-function canMove () {}
+function canMove (curPos, newPos) {
+    const rowCheck = Math.abs(curPos.y - newPos.row);
+    const columnCheck = Math.abs(curPos.x - newPos.column);
+    return (rowCheck === 0 && columnCheck === 1) || (rowCheck === 1 && columnCheck === 0)
+}
 // check city connections
 
-function updateActions () {}
-// update action points/tracking player actions
+function movPlayer(playerNum, playerPin, position) {
+    const playerImgClass = `player${playerNum}-pin`;
+    const playerPinImg = playerHTML(playerPin);
+    const newPlayerArea = map.children[position.row * 10 + position.column];
+    const oldPlayerArea = map.querySelector(`.${playerNum === 1 ? 'player1-pin' : 'player2-pin'}`);
+    if (oldPlayerArea) {
+        oldPlayerArea.parentNode.removeChild(oldPlayerArea);
+    }
 
-function updateMapInfection () {}
-// add or delete infections
+    if (playerNum === 1) {
+        const areaOccupied = newPlayerArea.querySelector(`player2-pin`);
+        if (areaOccupied) {
+            console.log('Invalid');
+            return;
+        }
+    }
 
-function outbreak () {}
-// if a level 3 infected city gets infected, the adjacent cities gains the additional infection
+    if (playerNum === 2) {
+        const areaOccupied = newPlayerArea.querySelector(`player1-pin`);
+        if (areaOccupied) {
+            console.log('Invalid');
+            return;
+        }
+    }
 
-function checkOutbreak () {}
-// if outbreak level gets to 5, its gameover
+    newPlayerArea.appendChild(playerPin);
 
-function checkWin () {}
-// if all cures are made and all cities have infection level 0
+    if (playerNum === 1) {
+        playerOne.playerpos.y = position.row;
+        playerOne.playerpos.x = position.column;
+    }
 
-function movePins () {}
-// animation of moving the pins of players
+    if (playerNum === 2) {
+        playerTwo.playerpos.y = position.row;
+        playerTwo.playerpos.x = position.column;
+    }
 
-function updateCureStatus () {}
-// visual of creating the cures
+}
 
-function drawAnimation () {}
-// visual of taking a card from deck and putting on hand
 
-function infectionAnimation () {}
-// "toxic" clouds animations on cities
+function playerHTML(playerNum, pic) {
+    const playerPin = document.createElement('img');
+    playerPin.src = pic;
+    playerPin.classList.add(`player${playerNum}-pin`);
+    return playerPin;
+}
 
-function cureAnimation () {}
-// cure drops on cities
+
+
 
 
 

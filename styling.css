@@ -1,6 +1,6 @@
 /* Course: SENG 513 */
-/* Date: Oct 23, 2023 */
-/* Assignment 2 */
+/* Date: Nov 18, 2023 */
+/* Assignment 3 */
 /* Name: John Lugue*/
 /* UCID: 30115250 */
 
@@ -89,8 +89,8 @@ body {
 }
 
 .midboard > .map > .blueCity {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #000;
     color: white;
     background-color: blue;
@@ -100,8 +100,8 @@ body {
 }
 
 .midboard > .map > .redCity {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #000;
     color: white;
     background-color: red;
@@ -111,8 +111,8 @@ body {
 }
 
 .midboard > .map > .yellowCity {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #000;
     color: white;
     background-color:darkgoldenrod;
@@ -122,8 +122,8 @@ body {
 }
 
 .midboard > .map > .blackCity {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #000;
     color: white;
     background-color:#3b444b;
